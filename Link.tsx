@@ -11,7 +11,7 @@ export const Link = ({
   const { pushState } = useContext(RouterContext);
   return (
     <a
-      href="#"
+      href={to}
       onClick={(e) => {
         e.preventDefault();
         pushState(to);

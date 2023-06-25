@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:client": "esbuild ./index.tsx --bundle --outfile=dist/client.js",
-    "build:server": "esbuild ./server.tsx --platform=node --bundle --outfile=dist/server.js",
     "build:tsc": "tsc",
+    "build:server": "esbuild ./server.tsx --platform=node --bundle --outfile=dist/server.js",
     "build": "run-p build:*"
   },
   "keywords": [],
