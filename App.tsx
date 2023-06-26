@@ -1,18 +1,18 @@
 import React from "react";
 
-import { Breeds } from "./Breeds";
+import Breeds from "./pages/breeds";
 import { Route } from "./Route";
 import { Router } from "./Router";
-import { Breed } from "./Breed";
+import Breed from "./pages/breed";
 
-export const App = () => {
+export const App = ({ initialPath }) => {
   return (
-    <Router>
-      <Route path="/">
-        <Breeds />
+    <Router initialPath={initialPath}>
+      <Route path="/breeds">
+        <Breeds initialBreeds={[]} />
       </Route>
       <Route path="/breed">
-        <Breed />
+        <Breed initialBreed={""} initialImage={""} />
       </Route>
     </Router>
   );

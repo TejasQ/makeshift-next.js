@@ -6,8 +6,18 @@ export const RouterContext = createContext({
   replaceState: (path: string) => {},
 });
 
-export const Router = ({ children }: { children: React.ReactNode }) => {
-  const [path, setPath] = React.useState<string>(window.location.pathname);
+const canWindow = () => typeof window !== "undefined";
+
+export const Router = ({
+  initialPath,
+  children,
+}: {
+  initialPath: string;
+  children: React.ReactNode;
+}) => {
+  const [path, setPath] = React.useState<string>(
+    canWindow() ? window.location.pathname : initialPath
+  );
 
   const pushState = (path: string) => {
     window.history.pushState({}, "", path);
