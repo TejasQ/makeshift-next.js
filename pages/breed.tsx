@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "../Link";
 
 const getBreed = async (breed: string) => {
-  return fetch(`http://localhost:3001/api/breed/${breed}/images/random`)
+  return fetch(`https://dog.ceo/api/breed/${breed}/images/random`)
     .then((response) => response.json())
     .then((data) => data.message);
 };

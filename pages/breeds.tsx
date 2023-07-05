@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "../Link";
 
 export const getStuff = async () => {
-  return fetch("http://localhost:3001/api/breeds/list/all")
+  return fetch("https://dog.ceo/api/breeds/list/all")
     .then((response) => response.json())
     .then((data) => {
       return Object.keys(data.message);
