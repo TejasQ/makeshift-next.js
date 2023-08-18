@@ -31,7 +31,7 @@ export const Breed = () => {
     <div>
       <Link to="/">Go Back</Link>
       <h1>{breed}</h1>
-      <img src={image} alt={breed} />
+      <img width="400" src={image} alt={breed} />
     </div>
   );
 };
